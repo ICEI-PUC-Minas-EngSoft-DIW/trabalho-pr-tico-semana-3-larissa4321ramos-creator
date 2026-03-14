@@ -1,11 +1,351 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Larissa Fineli - Currículo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #e0e0e0;
+            font-family: Georgia, 'Times New Roman', serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* CONTAINER PRINCIPAL DO CURRÍCULO */
+        .resume-container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- CABEÇALHO (FUNDO ROSA/BEGE) --- */
+        .resume-header {
+            display: flex;
+        }
+
+        .header-left {
+            width: 35%;
+            background-color: #efdfd8;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-top: 40px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .header-right {
+            width: 65%;
+            background-color: #f5ece8;
+            padding: 50px 50px 40px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .header-right h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #222;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .title {
+            font-size: 15px;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 35px;
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 40px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .contact-col p {
+            margin-bottom: 5px;
+        }
+
+        .resume-body {
+            display: flex;
+            background-color: #ffffff;
+        }
+
+        .body-left {
+            width: 35%;
+            padding: 50px 40px;
+        }
+
+        .summary-section {
+            position: relative;
+            margin-bottom: 50px;
+        }
+
+        .quote-mark {
+            font-size: 140px;
+            font-family: Georgia, serif;
+            font-style: italic;
+            color: #f1e4dd;
+            position: absolute;
+            top: -60px;
+            left: -10px;
+            z-index: 1;
+            line-height: 1;
+        }
+
+        .summary-text {
+            position: relative;
+            z-index: 2;
+            font-size: 13px;
+            color: #555;
+            text-align: left;
+        }
+
+        .sidebar-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .body-left .section-title {
+            border-top: 1px solid #333;
+            padding-top: 10px;
+            margin-bottom: 25px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .sidebar-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; 
+            padding: 0;
+        }
+
+        .sidebar-section li {
+            font-size: 13px;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .sidebar-section li::before {
+            content: "· ";
+            font-weight: bold;
+            color: #888;
+        }
+
+        .body-right {
+            width: 65%;
+            padding: 50px 50px 50px 50px;
+        }
+
+        .main-section {
+            margin-bottom: 45px;
+        }
+
+        .body-right .section-title {
+            display: inline-block;
+            border-top: 1px solid #333;
+            padding-top: 10px;
+            margin-bottom: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            min-width: 150px;
+        }
+
+        .job, .edu {
+            margin-bottom: 30px;
+        }
+
+        .job-header, .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title, .edu-degree {
+            font-weight: bold;
+            font-size: 14px;
+            color: #222;
+        }
+
+        .job-date, .edu-date {
+            font-style: italic;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .job-company, .edu-school {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .main-section ul {
+            list-style: none;
+        }
+
+        .main-section li {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .main-section li::before {
+            content: "· ";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #999;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <div class="resume-container">
+        
+        <header class="resume-header">
+            <div class="header-left">
+                <img src="lala.jpg" alt="Larissa Fineli" class="profile-img">
+            </div>
+            <div class="header-right">
+                <h1>Larissa Fineli</h1>
+                <h2 class="title">Desenvolvedora Fullstack</h2>
+                
+                <div class="contact-info">
+                    <div class="contact-col">
+                        <p>Avenida Indiana, 666</p>
+                        <p>Bairro Asiático, Índia</p>
+                        <p>Indianês</p>
+                    </div>
+                    <div class="contact-col">
+                        <p>lfini@gmail.com</p>
+                        <p>348483829</p>
+                        <p>40/03/2500</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="resume-body">
+            
+            <aside class="body-left">
+                <div class="summary-section">
+                    <div class="quote-mark">“</div>
+                    <p class="summary-text">Desenvolvedora Fullstack com anos de experiência na pratica, criando aplicações escaláveis e performáticas.</p>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="section-title">Habilidades</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>Node.js</li>
+                        <li>React</li>
+                        <li>MongoDB</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-section">
+                    <h3 class="section-title">Línguas</h3>
+                    <ul>
+                        <li>Português — Nativo</li>
+                        <li>Inglês — Fluente</li>
+                        <li>Espanhol — Intermediário</li>
+                        <li>Indianês — Nativo</li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="body-right">
+                
+                <div class="main-section">
+                    <h3 class="section-title">Experiência</h3>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="job-title">Trabalho Braçal nas ruas da Índia</span>
+                            <span class="job-date">Mar 2020 — Presente</span>
+                        </div>
+                        <div class="job-company">Indianos LTDA | Taj Mahal</div>
+                        <ul>
+                            <li>Fazendo comidas insalubres para o presidente do país.</li>
+                            <li>Limpeza de ruas e esgotos.</li>
+                            <li>Manutenção de equipamentos industriais.</li>
+                            <li>Prestava serviços de atendimento no Taj Mahal.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <div class="job-header">
+                            <span class="job-title">Auxiliar de marketing</span>
+                            <span class="job-date">Jan 2018 — Fev 2020</span>
+                        </div>
+                        <div class="job-company">Bangladesh LTDA | Dhaka</div>
+                        <ul>
+                            <li>Criação de campanhas publicitárias para o mercado indiano.</li>
+                            <li>Gerenciamento de redes sociais e conteúdo digital.</li>
+                            <li>Análise de dados de mercado e comportamento do consumidor.</li>
+                            <li>Colaboração com equipes de vendas para desenvolver estratégias de marketing eficazes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="main-section">
+                    <h3 class="section-title">Educação</h3>
+
+                    <div class="edu">
+                        <div class="edu-header">
+                            <span class="edu-degree">Bacharelado em Ciência da Computação</span>
+                            <span class="edu-date">2015 — 2019</span>
+                        </div>
+                        <div class="edu-school">Universidade Pontifícia da Miséria | Dehli</div>
+                        <ul>
+                            <li>Principais disciplinas: Algoritmos, Estruturas de Dados, Desenvolvimento Web, Banco de Dados, Inteligência Artificial.</li>
+                            <li>Participação em projetos acadêmicos e competições de programação.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+    </div>
+
 </body>
 </html>
